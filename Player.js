@@ -6,10 +6,11 @@ var onIce = false;
 var flagRight= true;
 var flagLeft= true;
 var IceSpeed=2;
+var JumpWallSpeed = 3;
 var flying= false
 var VelY=0;
 var gravity = 0.5;
-var lives=12;
+var lives=4;
 function player(){
 
 	test.isCollRight= function(obj){
@@ -64,21 +65,20 @@ function player(){
 			}
 	onIce = false;
 	onground = false;
+	
 	flagTop=false;
 	flagRight= false;
 	flagLeft = false;
+	onjumpwall = false;
 	test.Y += VelY;
 
 	Collision();
-	if(test.Y > 750){
-		gameover=true;
-		VelY = gravity;
-	}
+
 	if(flagTop){	
 		VelY=gravity;
 	}
 		
-	if(onground){		
+	if(onground||CreditsScreen){		
 		VelY = 0;
 	}else{
 		VelY += gravity;
@@ -142,6 +142,7 @@ function player(){
 		lives = 3;
 	}
 	if (test.Y>=GroundBarrier.Y){
+		console.log("lower than Gbarrier");
 		gameover = true
 	}
 		if(attacking&&test.isColl(enemy)&&level == 0){

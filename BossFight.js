@@ -15,6 +15,7 @@ function Bossfight(){
 	emerald.X=0;
 	emerald.Y=0;
 	BossBattle = true;
+	PongBossBattle = true;//the level after this one needs to set this false
 		test.X=500
 		test.Y=372
 		for (i=0; i<2; i++ ){
@@ -32,7 +33,11 @@ function Boss(){
 	if(bossHealth ==0){
 		Paddle.length=0
 		Ball.X=-22222;
-// Powerup or victory screen go here
+		endDoor.X= display.width/2-100;
+		endDoor.Y=450;
+		endDoor.W= 100
+		endDoor.H=100;
+
 }
 	for (i=0; i<Paddle.length; i++ ){
 		for(j=0; j<PaddleSpeed;j++){
