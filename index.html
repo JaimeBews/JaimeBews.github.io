@@ -32,6 +32,7 @@
 	<canvas id="screen" width=800 height = 640></canvas>
 
 	<script>
+
 	var VFX_Button = new Audio("Sounds/ButtonClick.wav");
 	var VFX_SpikeHit = new Audio("Sounds/GettingHit2.mp3");
 	var VFX_NormalHit = new Audio ("Sounds/GettingHit.wav");
@@ -249,7 +250,7 @@
 				}
 			}
 		}
-		
+
 		
 		function Main(){
 		if(mainmenu){
@@ -259,6 +260,13 @@
 			render();
 			setTimeout(Main,1000/60);
 			}else if(gameover){
+			PongBossBattle= false;
+			
+			sound.pause();
+			VFX_Background2.pause();
+			VFX_Background3.pause();
+			VFX_Boss_Music.pause();
+			StoneBossBattle = false;
 			VFX_MainMenu.play();			
 			render();
 			setTimeout(Main,1000/60);
