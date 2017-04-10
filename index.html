@@ -74,9 +74,31 @@
 			}
 			if(gameover){
 				if(p2rectCheck(canvasMouseX,canvasMouseY,RestartButton.X,RestartButton.Y,RestartButton.W,RestartButton.H)==0){
-			
+					VFX_Button.play();
+					VFX_MainMenu.pause();	
+					gameover = false;
+					if (level==0){
+						Level1();
+					}
+					if (level==1){
+						Level2();
+					}
+					if (level==2){
+						StoneBossfight();
+					}
+					if (level==3){
+						Level3();
+					}
+					if (level==4){
+						Level4();
+					}
+					if (level==5){
+						Bossfight();
+					}
+						
 				}
 				if(p2rectCheck(canvasMouseX,canvasMouseY,MainMenuButton.X,MainMenuButton.Y,MainMenuButton.W,MainMenuButton.H)==0){
+					VFX_Button.play();
 					level=0;
 					lives =4;
 					gameover = false;
@@ -91,8 +113,8 @@
 			return Math.sqrt( (canvasMouseX-cx)*(canvasMouseX-cx) + (canvasMouseY-cy)*(canvasMouseY-cy) );
 		}
 		
-		var RestartButton = new Object("images/L12Boss/Shield.png",display.width/2-80,display.height/2-30,300,200);
-		var MainMenuButton = new Object("images/L12Boss/Shield.png", 400 , display.height-100,300,200);
+		var RestartButton = new Object("images/Restart.png",display.width/2-80,465,150,30);
+		var MainMenuButton = new Object("images/Return.png", display.width/2-80,525,150,30);
 		var StartButton = new Object("images/start.png",display.width/2-80,display.height/2-30,150,100);	
 		
 		var backgroundIncrement = 2700;
@@ -260,8 +282,7 @@
 			render();
 			setTimeout(Main,1000/60);
 			}else if(gameover){
-			PongBossBattle= false;
-			
+			PongBossBattle= false;			
 			sound.pause();
 			VFX_Background2.pause();
 			VFX_Background3.pause();
