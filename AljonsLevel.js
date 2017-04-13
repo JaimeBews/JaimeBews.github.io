@@ -1,6 +1,7 @@
 function Level4(){
 	ClearAllArrays();
 	sound.pause();	
+	VFX_Background4.play();
 	var Level4Ground="images/LevelFour/L4Grass.png";
 	var Level4Platform="images/LevelFour/L4Platform.png";
 	var Level4Spike="images/LevelFour/spike.png";
