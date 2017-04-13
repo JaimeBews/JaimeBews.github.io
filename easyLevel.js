@@ -1,6 +1,6 @@
 function Level1(){
 	ClearAllArrays();
-	VFX_Background5.play();
+	VFX_Background2.play();
 	BossBattle = false;	
 	var Level3Ground="images/LevelThree/L3Grass.png";
 	var Level3Platform="images/LevelThree/L3Platform.png";
