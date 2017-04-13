@@ -13,7 +13,7 @@
 	<script language="javascript" type="text/javascript" src="Level1-1.js"></script>
 	<script language="javascript" type="text/javascript" src="Level2.js"></script>
 	<script language="javascript" type="text/javascript" src="TileBuilder.js"></script>
-	<script language="javascript" type="text/javascript" src="bernardslevel.js"></script>
+	<script language="javascript" type="text/javascript" src="AljonsLevel.js"></script>
 	<script language="javascript" type="text/javascript" src="jovoLevel.js"></script>
 	<script language="javascript" type="text/javascript" src="Presentation.js"></script>
    <script language="javascript" type="text/javascript" src="BossFight.js"></script>
@@ -46,6 +46,9 @@
 	var VFX_Background3 = new Audio("Sounds/BackgroundMusic3.mp3");
 		VFX_Background3.volume = 0.1;
 		VFX_Background3.loop=true;	
+	var VFX_Background4 = new Audio("Sounds/BackgroundMusic4.mp3");
+		VFX_Background4.volume = 0.1;
+		VFX_Background4.loop=true;	
 	var VFX_Pong = new Audio("Sounds/Pong.wav");
 	var VFX_Sword = new Audio("Sounds/SwordSwing5.wav");
 		VFX_Sword.volume=0.3;
@@ -286,6 +289,7 @@
 			sound.pause();
 			VFX_Background2.pause();
 			VFX_Background3.pause();
+			VFX_Background4.pause();
 			VFX_Boss_Music.pause();
 			StoneBossBattle = false;
 			VFX_MainMenu.play();			
