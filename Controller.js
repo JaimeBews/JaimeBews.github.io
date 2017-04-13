@@ -12,7 +12,7 @@ function keyDown(e){
 	if (String.fromCharCode(e.keyCode)=="D"){
 		D= true;	
 	}		
-	if (String.fromCharCode(e.keyCode)== "K"){
+	if (String.fromCharCode(e.keyCode)== "T"){
 		T = true;				
 	}
 	if (String.fromCharCode(e.keyCode)=="G"){
@@ -38,7 +38,7 @@ function keyUp(e){
 	if (String.fromCharCode(e.keyCode)== "D"){
 		D = false;
 	}	
-	if (String.fromCharCode(e.keyCode)== "K"){
+	if (String.fromCharCode(e.keyCode)== "T"){
 		T = false;
 	}
 	if (String.fromCharCode(e.keyCode)=="G"){
