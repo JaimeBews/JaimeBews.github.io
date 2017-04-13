@@ -13,6 +13,7 @@ var attacking = false;
 function Animate(){ //needs a if(D&&A)
 
 	if(D&&!attacking&&!A){
+	
 		animCol= 75;
 		delayR++;
 		animWidth= 50;
@@ -28,7 +29,7 @@ function Animate(){ //needs a if(D&&A)
 	}	
 
 	 if(A&&!attacking&&!D){
-
+	
 		animCol= 0;
 		delayL++;
 		animWidth= 50;
@@ -49,8 +50,26 @@ function Animate(){ //needs a if(D&&A)
 		setTimeout(AttackDelay,1000);
 		
 	}
+	if(!attacking&&!A&&!D){
+		
+		if(faceLeft){
+			console.log("left");
+			animCol= 0;
+			animRow=0;
+			animWidth= 50;
+		}
+		if(faceRight){
+			animCol= 75;
+			animRow=0;
+			animWidth= 50;
+		}
+	}
+	
 		if(attacking&&faceLeft){
-			
+			if (delay == 0){
+				animCol= 0;
+				animRow=0;
+			}
 		
 			animCol= 150;
 			animHeight=75;
@@ -59,31 +78,35 @@ function Animate(){ //needs a if(D&&A)
 			if(delay > 5){
 				animWidth=75;
 				counter++;
-				animRow= 20;	//225
+				animRow= 225;	//225
 			}
 			if(delay > 10){
 				animWidth=75;
 				counter++;
-				animRow= 75;	//150
+				animRow= 150;	//150
 			}
 			if(delay > 15){
 				animWidth=75;
 				counter++;
-				animRow= 150;	//75
+				animRow= 75;	//75
 			}
 			if(delay >= 20){
 				animWidth=75;
 				counter++;
-				animRow= 225;	//20
+				animRow= 20;	//20
 				delay = 0;
-				animCol= 0;
-				animWidth= 50;
-				animHeight=75;
+			//	animCol= 0;
+			//	animWidth= 50;
+			//	animHeight=75;
 				attacking = false;
 			}
 			
 		}
 			if(attacking&&faceRight){
+				if (delay ==0){
+					animCol= 75;
+					animRow=0;
+				}
 			animCol= 225;
 			animHeight=75;
 			delay++;
