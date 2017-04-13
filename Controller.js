@@ -1,6 +1,6 @@
 var W, S, A, D, T,F,G,H;
 function keyDown(e){
-	if (String.fromCharCode(e.keyCode)== "W"){
+	if (String.fromCharCode(e.keyCode)== " "){
 		W = true;
 	}
 	if (String.fromCharCode(e.keyCode)=="S"){
@@ -26,7 +26,7 @@ function keyDown(e){
 	}				
 }
 function keyUp(e){
-	if (String.fromCharCode(e.keyCode)== "W"){
+	if (String.fromCharCode(e.keyCode)== " "){
 		W = false;
 	}
 	if (String.fromCharCode(e.keyCode)== "S"){
