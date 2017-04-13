@@ -2,13 +2,13 @@ function Level1(){
 	ClearAllArrays();
 	VFX_Background2.play();
 	BossBattle = false;	
-	var Level3Ground="images/LevelThree/L3Grass.png";
-	var Level3Platform="images/LevelThree/L3Platform.png";
-	var Level3Spike="images/LevelThree/L3Spike.png";
-	var Level3Spike2="images/LevelThree/L3Spike1.png";	
-	var Level3ClimbRight="images/LevelThree/L3ClimbRight.png";
-	var Level3ClimbLeft="images/LevelThree/L3ClimbLeft.png";
-	var Level3Turret="images/Asset/turret.png";
+	var Level3Ground="images/LevelOne/L1Dirt.png";
+	var Level3Platform="images/LevelOne/L1Platform.png";
+	var Level3Spike="images/LevelOne/spike.png";
+	var Level3Spike2="images/LevelOne/spikeFlip.png";	
+	var Level3ClimbRight="images/LevelOne/ClimableWallRight.png";
+	var Level3ClimbLeft="images/LevelOne/ClimableWallLeft.png";
+	var Level3Turret="images/LevelOne/turret.png";
 	setTurret(Level3Turret);
 	setGround(Level3Ground, Level3ClimbRight, Level3ClimbLeft );
     setPlatform(Level3Platform);
@@ -44,7 +44,7 @@ function Level1(){
 			newEnemy[i].enemyResetCounter =0;
 		}
 	
-		emerald.Sprite.src="images/LevelThree/L3Background.png";
+		emerald.Sprite.src="images/LevelOne/L1Background.png";
 		emerald.H=1512;
 		emerald.W=2700;
 		emerald.X=0;

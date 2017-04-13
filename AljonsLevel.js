@@ -8,6 +8,7 @@ function Level4(){
 	var Level4ClimbRight="images/LevelFour/ClimableWallRight.png";
 	var Level4ClimbLeft="images/LevelFour/ClimableWallLeft.png";
 	var Level3Turret="images/Asset/turret.png";
+	
 	setTurret(Level3Turret);
 	setGround(Level4Ground, Level4ClimbRight, Level4ClimbLeft );
     setPlatform(Level4Platform);
@@ -38,6 +39,7 @@ function Level4(){
 			newEnemy[i].E_VelY=0;
 			newEnemy[i].enemyCounter=0;
 			newEnemy[i].enemyResetCounter =0;
+			newEnemy[i].Sprite.src="images/test_sheetblue.png";
 		}
 		emerald.Sprite.src="images/LevelFour/L4Background.png";
 		emerald.H=1512;
