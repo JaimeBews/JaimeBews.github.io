@@ -59,7 +59,6 @@ function Animate(){ //needs a if(D&&A)
 	if(!attacking&&!A&&!D){
 		
 		if(faceLeft){
-			console.log("left");
 			animCol= 0;
 			animRow=0;
 			animWidth= 50;
@@ -101,9 +100,9 @@ function Animate(){ //needs a if(D&&A)
 				counter++;
 				animRow= 20;	//20
 				delay = 0;
-			//	animCol= 0;
-			//	animWidth= 50;
-			//	animHeight=75;
+				animCol= 0;
+				animWidth= 50;
+				animHeight=75;
 				attacking = false;
 			}
 			
