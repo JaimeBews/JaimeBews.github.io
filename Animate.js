@@ -9,7 +9,8 @@ var animWidth=50;
 var counter =0;
 var recently_Attacked = false;
 var attacking = false;
-
+var facingLeftWhenAttacked = false;
+var facingRightWhenAttacked = false;
 function Animate(){ //needs a if(D&&A)
 
 	if(D&&!attacking&&!A){
@@ -45,10 +46,15 @@ function Animate(){ //needs a if(D&&A)
 	}
 	if(T&&onground&&!recently_Attacked){
 		VFX_Sword.play();
+		facingLeftWhenAttacked=false;
+		facingRightWhenAttacked=false;
 		recently_Attacked=true;
 		attacking = true;
 		setTimeout(AttackDelay,1000);
-		
+		if(faceLeft)
+			facingLeftWhenAttacked = true;
+		else
+			facingRightWhenAttacked = true
 	}
 	if(!attacking&&!A&&!D){
 		
@@ -65,7 +71,7 @@ function Animate(){ //needs a if(D&&A)
 		}
 	}
 	
-		if(attacking&&faceLeft){
+		if(attacking&&facingLeftWhenAttacked){
 			if (delay == 0){
 				animCol= 0;
 				animRow=0;
@@ -102,7 +108,7 @@ function Animate(){ //needs a if(D&&A)
 			}
 			
 		}
-			if(attacking&&faceRight){
+			if(attacking&&facingRightWhenAttacked){
 				if (delay ==0){
 					animCol= 75;
 					animRow=0;
