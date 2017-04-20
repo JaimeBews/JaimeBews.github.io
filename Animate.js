@@ -57,7 +57,6 @@ function Animate(){ //needs a if(D&&A)
 	if(!attacking&&!A&&!D){
 		
 		if(faceLeft){
-			console.log("left");
 			animCol= 0;
 			animRow=0;
 			animWidth= 50;
