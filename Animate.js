@@ -54,7 +54,7 @@ function Animate(){ //needs a if(D&&A)
 		else
 			facingRightWhenAttacked = true
 	}
-	if(!attacking&&!A&&!D){
+	if(!attacking&&!A&&!D){//Idle
 		
 		if(faceLeft){
 			animCol= 0;
@@ -78,22 +78,22 @@ function Animate(){ //needs a if(D&&A)
 			animHeight=75;
 			delay++;
 			
-			if(delay > 5){
+			if(delay > 50){
 				animWidth=75;
 				counter++;
 				animRow= 75;	//150
 			}
-			if(delay > 10){
+			if(delay > 100){
 				animWidth=75;
 				counter++;
 				animRow= 150;
 			}
-			if(delay > 15){
+			if(delay > 150){
 				animWidth=75;
 				counter++;
 				animRow= 226;	//75
 			}
-			if(delay >= 20){
+			if(delay >= 200){
 				animWidth=75;
 				counter++;
 				animRow= 226;	//20
@@ -114,22 +114,22 @@ function Animate(){ //needs a if(D&&A)
 			animHeight=75;
 			delay++;
 			
-			if(delay > 5){
+			if(delay > 50){
 				animWidth=75;
 				counter++;
 				animRow= 0;	//50
 			}
-			if(delay > 10){
+			if(delay > 100){
 				animWidth=75;
 				counter++;
 				animRow= 75;	//70
 			}
-			if(delay > 15){
+			if(delay > 150){
 				animWidth=75;
 				counter++;
 				animRow= 150;	//70
 			}
-			if(delay >= 20){
+			if(delay >= 200){
 				animWidth=75;
 				counter++;
 				animRow= 225;	//60
